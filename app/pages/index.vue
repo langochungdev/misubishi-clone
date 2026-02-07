@@ -9,11 +9,11 @@
 </template>
 
 <script setup lang="ts">
-import HeroSlider from './home/components/HeroSlider.vue';
-import IntroSection from './home/components/IntroSection.vue';
-import NewsSection from './home/components/NewsSection.vue';
-import SocialSection from './home/components/SocialSection.vue';
-import RelatedPages from './home/components/RelatedPages.vue';
+import HeroSlider from './home/(components)/HeroSlider.vue';
+import IntroSection from './home/(components)/IntroSection.vue';
+import NewsSection from './home/(components)/NewsSection.vue';
+import SocialSection from './home/(components)/SocialSection.vue';
+import RelatedPages from './home/(components)/RelatedPages.vue';
 
 definePageMeta({
     layout: 'default'
