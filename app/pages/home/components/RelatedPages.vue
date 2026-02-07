@@ -23,9 +23,6 @@
             </button>
         </div>
 
-        <div class="carousel-dots">
-            <span class="dot active"></span>
-        </div>
     </section>
 </template>
 

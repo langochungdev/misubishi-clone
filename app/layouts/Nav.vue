@@ -3,40 +3,23 @@
         <div class="header-container">
             <div class="logo-section">
                 <a href="/" class="logo-link">
-                    <img src="https://placehold.co/150x35/e60012/white?text=MELCO" alt="Mitsubishi Electric" class="logo" />
+                    <img src="https://placehold.co/65x65/e60012/white?text=LOGO" alt="Mitsubishi Electric" class="logo" />
                 </a>
-                <div class="logo-text">
-                    <span>MITSUBISHI</span>
-                    <span>ELECTRIC</span>
-                    <span>VIETNAM</span>
-                </div>
             </div>
 
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#">Thiết bị gia dụng</a></li>
-                    <li><a href="#">Giải pháp Tòa nhà</a></li>
-                    <li><a href="#">Tự động hóa Công nghiệp</a></li>
-                    <li><a href="#">Sáng Kiến Bền Vững</a></li>
+                    <li><a href="#">Trang chủ</a></li>
                     <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Tuyển dụng</a></li>
-                    <li><a href="#">Tin tức</a></li>
+                    <li><a href="#">Dịch vụ</a></li>
+                    <li><a href="#">Sản phẩm</a></li>
+                    <li><a href="#">Dự án</a></li>
+                    <li><a href="#">Bài viết</a></li>
+                    <li><a href="#">Liên hệ</a></li>
                 </ul>
             </nav>
 
             <div class="header-actions">
-                <button class="lang-btn">
-                    <span>VI</span>
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                        <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-                <button class="user-btn">
-                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2" />
-                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2" />
-                    </svg>
-                </button>
                 <button class="search-btn">
                     <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
                         <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" />
@@ -85,8 +68,8 @@
 }
 
 .logo {
-    height: 35px;
-    width: auto;
+    height: 65px;
+    width: 65px;
 }
 
 .logo-text {
