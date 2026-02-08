@@ -188,4 +188,59 @@ const videos = [
     background: black;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .social-grid {
+        grid-template-columns: 1fr;
+        min-height: auto;
+    }
+
+    .facebook-column {
+        padding: 30px 16px;
+    }
+
+    .facebook-column h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .facebook-placeholder {
+        height: 400px;
+    }
+
+    .youtube-column {
+        padding: 30px 16px;
+        position: static;
+    }
+
+    .youtube-column h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .video-thumbnail {
+        height: 200px;
+    }
+
+    .video-card {
+        margin-bottom: 10px;
+    }
+
+    .video-title {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .youtube-btn {
+        position: static;
+        margin-top: 20px;
+        display: inline-flex;
+        font-size: 16px;
+    }
+}
 </style>

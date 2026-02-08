@@ -49,4 +49,18 @@
     color: white;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
+
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 300px;
+    }
+
+    .hero-content {
+        padding-left: 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+}
 </style>

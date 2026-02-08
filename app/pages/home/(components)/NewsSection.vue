@@ -184,4 +184,43 @@ const newsItems = ref<NewsItem[]>([
     background: black;
     color: white;
 }
+
+@media (max-width: 768px) {
+    .news-tabs {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-btn {
+        padding: 16px 20px;
+        font-size: 18px;
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .tab-btn:last-child {
+        border-bottom: none;
+    }
+
+    .news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .news-image {
+        height: 200px;
+        padding: 16px;
+    }
+
+    .news-content {
+        padding: 16px;
+    }
+
+    .news-title {
+        font-size: 16px;
+    }
+
+    .news-btn {
+        font-size: 16px;
+        padding: 10px 14px;
+    }
+}
 </style>

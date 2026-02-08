@@ -238,4 +238,69 @@
     align-items: center;
     gap: 10px;
 }
+
+@media (max-width: 768px) {
+    .intro-header {
+        padding: 20px 16px;
+    }
+
+    .intro-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .intro-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .intro-card {
+        padding: 24px 16px;
+        border-bottom: 1px solid #333;
+    }
+
+    .intro-card h3 {
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .intro-card p {
+        font-size: 15px;
+        padding-right: 40px;
+    }
+
+    .expand-btn {
+        font-size: 32px;
+        right: 16px;
+        bottom: 24px;
+    }
+
+    .banner-link.data-center {
+        height: 200px;
+    }
+
+    .banner-link.ai-robot {
+        height: 200px;
+    }
+
+    .banner-text img {
+        max-width: 280px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-card {
+        height: 220px;
+    }
+
+    .product-overlay h3 {
+        font-size: 18px;
+    }
+
+    .learn-more {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
 </style>

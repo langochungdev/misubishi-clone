@@ -157,4 +157,33 @@ function nextSlide() {
 .dot.active {
     background: black;
 }
+
+@media (max-width: 768px) {
+    .related-section {
+        padding: 20px 0;
+    }
+
+    .related-title {
+        font-size: 20px;
+        margin: 0 16px 20px;
+    }
+
+    .carousel-track {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-btn {
+        display: none;
+    }
+
+    .related-card {
+        height: 220px;
+    }
+
+    .learn-more {
+        padding: 10px 20px;
+        font-size: 15px;
+        bottom: 20px;
+    }
+}
 </style>

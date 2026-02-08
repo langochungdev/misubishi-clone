@@ -1,11 +1,10 @@
 <template>
     <footer class="footer">
-
         <div class="footer-bottom">
             <div class="footer-brand">
-                <a href="/" class="footer-logo">
-                    <img src="https://placehold.co/200x50/transparent/333?text=MELCO+LOGO" alt="Mitsubishi Electric" />
-                </a>
+                <NuxtLink to="/" class="footer-logo">
+                    <img src="https://placehold.co/200x50/transparent/333?text=MELCO+LOGO" alt="Mitsubishi Electric" width="160" height="40" />
+                </NuxtLink>
                 <span class="copyright">© Mitsubishi Electric Vietnam</span>
             </div>
 
@@ -18,9 +17,12 @@
                     ngày 06/06/2011, cấp đổi lần thứ 12 ngày 11/11/2020
                 </p>
                 <div class="footer-legal">
-                    <a href="#">Liên hệ</a> |
-                    <a href="#">Chính sách quyền riêng tư</a> |
-                    <a href="#">Điều khoản sử dụng</a> |
+                    <NuxtLink to="/contact">Liên hệ</NuxtLink>
+                    <span class="divider">|</span>
+                    <a href="#">Chính sách quyền riêng tư</a>
+                    <span class="divider">|</span>
+                    <a href="#">Điều khoản sử dụng</a>
+                    <span class="divider">|</span>
                     <a href="#">Sơ đồ trang web</a>
                 </div>
             </div>
@@ -37,28 +39,30 @@
 }
 
 .footer-bottom {
-    background: #dcdbdb;
-    padding: 20px 0;
-}
-
-.footer-bottom {
     max-width: 1920px;
     margin: 0 auto;
     padding: 20px 250px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    background: #dcdbdb;
 }
 
 .footer-brand {
     display: flex;
     flex-direction: column;
     gap: 80px;
+    flex-shrink: 0;
 }
 
 .footer-logo img {
     width: 160px;
     height: auto;
+}
+
+.footer-logo:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 4px;
 }
 
 .copyright {
@@ -70,6 +74,7 @@
 
 .footer-info {
     text-align: right;
+    min-width: 0;
 }
 
 .footer-info p {
@@ -86,14 +91,70 @@
     font-weight: 400;
     font-size: 18px;
     color: black;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.footer-legal .divider {
+    color: #999;
 }
 
 .footer-legal a {
     color: black;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .footer-legal a:hover {
     color: #e60012;
+}
+
+.footer-legal a:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        padding: 24px 16px;
+        gap: 24px;
+    }
+
+    .footer-brand {
+        gap: 12px;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-logo img {
+        width: 140px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    .footer-info {
+        text-align: center;
+    }
+
+    .footer-info p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .footer-info p br {
+        display: none;
+    }
+
+    .footer-legal {
+        justify-content: center;
+        font-size: 14px;
+        gap: 6px;
+    }
 }
 </style>
