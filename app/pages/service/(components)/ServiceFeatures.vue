@@ -114,4 +114,40 @@ const features = [
     color: rgba(255, 255, 255, 0.85);
     margin: 0;
 }
+
+@media (max-width: 768px) {
+    .service-features-wrapper {
+        margin: 0;
+        padding: 40px 20px;
+    }
+
+    .features-title {
+        font-size: clamp(22px, 5vw, 30px);
+        text-wrap: balance;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .feature-card {
+        padding: 24px 16px;
+    }
+
+    .feature-title {
+        font-size: 18px;
+    }
+
+    .feature-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+@media (max-width: 420px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
 </style>

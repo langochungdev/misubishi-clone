@@ -13,22 +13,22 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fullName">Họ và tên *</label>
-                            <input id="fullName" v-model="form.fullName" type="text" required />
+                            <input id="fullName" v-model="form.fullName" type="text" autocomplete="name" required />
                         </div>
                         <div class="form-group">
                             <label for="company">Công ty</label>
-                            <input id="company" v-model="form.company" type="text" />
+                            <input id="company" v-model="form.company" type="text" autocomplete="organization" />
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email *</label>
-                            <input id="email" v-model="form.email" type="email" required />
+                            <input id="email" v-model="form.email" type="email" autocomplete="email" required />
                         </div>
                         <div class="form-group">
                             <label for="phone">Số điện thoại *</label>
-                            <input id="phone" v-model="form.phone" type="tel" required />
+                            <input id="phone" v-model="form.phone" type="tel" autocomplete="tel" required />
                         </div>
                     </div>
 
@@ -59,7 +59,7 @@
             </div>
 
             <div class="form-image">
-                <img src="https://placehold.co/710x700/0d47a1/white?text=Liên+hệ" alt="Liên hệ Mitsubishi Electric" />
+                <img src="https://placehold.co/710x700/0d47a1/white?text=Liên+hệ" alt="Liên hệ Mitsubishi Electric" width="710" height="700" loading="lazy" />
             </div>
         </div>
     </section>
@@ -177,7 +177,12 @@ function handleSubmit() {
     color: white;
     cursor: pointer;
     align-self: flex-start;
-    transition: all 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.submit-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .submit-btn:hover {
@@ -199,5 +204,57 @@ function handleSubmit() {
 
 .form-image:hover img {
     transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-title {
+        font-size: clamp(28px, 5vw, 40px);
+        text-wrap: balance;
+    }
+
+    .form-title br {
+        display: none;
+    }
+
+    .form-content {
+        padding: 30px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .form-image {
+        height: 300px;
+    }
+
+    .submit-btn {
+        min-height: 44px;
+        touch-action: manipulation;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px;
+        min-height: 44px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .submit-btn,
+    .form-group input,
+    .form-group select,
+    .form-group textarea,
+    .form-image img {
+        transition: none;
+    }
 }
 </style>

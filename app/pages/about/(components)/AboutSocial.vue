@@ -18,8 +18,8 @@
                 <div class="videos-grid">
                     <div v-for="video in videos" :key="video.id" class="video-card">
                         <a :href="video.link" class="video-thumbnail">
-                            <img :src="video.thumbnail" :alt="video.title" />
-                            <div class="play-button">
+                            <img :src="video.thumbnail" :alt="video.title" width="423" height="316" loading="lazy" />
+                            <div class="play-button" aria-hidden="true">
                                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                                     <circle cx="30" cy="30" r="28" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2" />
                                     <path d="M24 18l18 12-18 12V18z" fill="white" />
@@ -30,7 +30,7 @@
                     </div>
                 </div>
 
-                <a href="https://www.youtube.com/@MitsubishiElectricVietnam" target="_blank" class="youtube-btn">
+                <a href="https://www.youtube.com/@MitsubishiElectricVietnam" target="_blank" rel="noopener noreferrer" class="youtube-btn">
                     <span>Youtube</span>
                     <img src="https://www.youtube.com/favicon.ico" alt="YouTube" class="yt-icon" />
                 </a>
@@ -131,6 +131,7 @@ const videos = [
     display: block;
     overflow: hidden;
     border-radius: 0;
+    touch-action: manipulation;
 }
 
 .video-thumbnail img {
@@ -146,11 +147,16 @@ const videos = [
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.9;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s ease;
 }
 
 .video-thumbnail:hover .play-button {
     opacity: 1;
+}
+
+.video-thumbnail:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .video-title {
@@ -179,7 +185,9 @@ const videos = [
     color: black;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    touch-action: manipulation;
+    min-height: 44px;
 }
 
 .youtube-btn:hover {
@@ -187,9 +195,80 @@ const videos = [
     color: white;
 }
 
+.youtube-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
+}
+
 .yt-icon {
     width: 35px;
     height: 29px;
     object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .about-social-wrapper {
+        margin: 0;
+    }
+
+    .social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .facebook-column {
+        padding: 28px 16px;
+        min-height: auto;
+    }
+
+    .youtube-column {
+        padding: 28px 16px;
+        position: static;
+    }
+
+    .social-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .facebook-placeholder {
+        height: 400px;
+    }
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .video-thumbnail img {
+        height: auto;
+        aspect-ratio: 4 / 3;
+    }
+
+    .play-button svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .video-title {
+        font-size: 15px;
+        padding: 0;
+        margin-top: 8px;
+    }
+
+    .youtube-btn {
+        position: static;
+        margin-top: 24px;
+        width: 100%;
+        justify-content: center;
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .play-button,
+    .youtube-btn {
+        transition: none;
+    }
 }
 </style>

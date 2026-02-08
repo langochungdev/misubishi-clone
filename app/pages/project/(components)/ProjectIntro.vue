@@ -90,4 +90,48 @@ const stats = [
     color: white;
     text-align: center;
 }
+
+@media (max-width: 768px) {
+    .project-intro-wrapper {
+        margin: 0;
+    }
+
+    .intro-content {
+        padding: 15px 20px;
+    }
+
+    .intro-heading {
+        font-size: clamp(28px, 6vw, 48px);
+    }
+
+    .intro-description {
+        font-size: 16px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-card {
+        padding: 24px 16px;
+        border-right: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .stat-card:nth-child(odd) {
+        border-right: 1px solid #333;
+    }
+
+    .stat-card:nth-last-child(-n+2) {
+        border-bottom: none;
+    }
+
+    .stat-number {
+        font-size: clamp(32px, 6vw, 48px);
+    }
+
+    .stat-label {
+        font-size: 15px;
+    }
+}
 </style>

@@ -25,4 +25,14 @@
 .map-container iframe {
     display: block;
 }
+
+@media (max-width: 768px) {
+    .contact-map-wrapper {
+        margin: 0;
+    }
+
+    .map-container {
+        height: 320px;
+    }
+}
 </style>

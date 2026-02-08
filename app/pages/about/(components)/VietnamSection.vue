@@ -100,12 +100,19 @@
     cursor: pointer;
     margin-top: auto;
     align-self: flex-end;
-    transition: all 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    touch-action: manipulation;
+    min-height: 44px;
 }
 
 .learn-more-btn:hover {
     background: black;
     color: white;
+}
+
+.learn-more-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .stats-block {
@@ -163,14 +170,89 @@
     font-size: 22px;
     color: black;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    touch-action: manipulation;
+    min-height: 44px;
 }
 
 .stats-link:hover {
     color: #e60012;
 }
 
+.stats-link:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
+}
+
 .link-icon {
     font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .vietnam-section-wrapper {
+        margin: 0;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-block {
+        padding: 28px 16px;
+        min-height: auto;
+    }
+
+    .section-title {
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.15;
+        margin-bottom: 24px;
+    }
+
+    .section-title br {
+        display: none;
+    }
+
+    .section-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .learn-more-btn {
+        align-self: stretch;
+        justify-content: center;
+        margin-top: 24px;
+        font-size: 16px;
+    }
+
+    .stats-top {
+        min-height: 240px;
+        padding: 24px 16px;
+    }
+
+    .stats-number {
+        font-size: 100px;
+        line-height: 80px;
+    }
+
+    .stats-unit {
+        font-size: 24px;
+    }
+
+    .stats-links {
+        padding: 20px 16px;
+        gap: 8px;
+    }
+
+    .stats-link {
+        font-size: 18px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .learn-more-btn,
+    .stats-link {
+        transition: none;
+    }
 }
 </style>

@@ -3,7 +3,7 @@
 <template>
     <section class="hero-banner-wrapper">
         <div class="hero-banner">
-            <img src="https://placehold.co/1920x445/333333/white?text=About+Banner" alt="Giới thiệu" class="banner-image" />
+            <img src="https://placehold.co/1920x445/333333/white?text=About+Banner" alt="Giới thiệu" width="1920" height="445" fetchpriority="high" class="banner-image" />
             <h1 class="banner-title">GIỚI THIỆU</h1>
         </div>
     </section>
@@ -38,5 +38,19 @@
     text-shadow: -4px 5px 14px black;
     margin: 0;
     text-align: center;
+    text-wrap: balance;
+}
+
+@media (max-width: 768px) {
+    .hero-banner-wrapper {
+        height: auto;
+        aspect-ratio: 16 / 7;
+        min-height: 200px;
+        padding-top: 56px;
+    }
+
+    .banner-title {
+        font-size: clamp(28px, 8vw, 48px);
+    }
 }
 </style>

@@ -11,7 +11,7 @@
         <div class="project-grid">
             <a v-for="project in filteredProjects" :key="project.id" :href="project.link" class="project-card">
                 <div class="card-image">
-                    <img :src="project.image" :alt="project.title" />
+                    <img :src="project.image" :alt="project.title" width="710" height="400" loading="lazy" />
                     <span class="card-category">{{ project.category }}</span>
                 </div>
                 <div class="card-content">
@@ -149,11 +149,16 @@ const filteredProjects = computed(() => {
     font-weight: 500;
     font-size: 16px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
 .filter-btn:last-child {
     border-right: none;
+}
+
+.filter-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: -2px;
 }
 
 .filter-btn:hover,
@@ -260,11 +265,69 @@ const filteredProjects = computed(() => {
     cursor: pointer;
     margin-top: auto;
     align-self: flex-end;
-    transition: all 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .project-card:hover .learn-more-btn {
     background: black;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .project-list-wrapper {
+        margin: 0;
+    }
+
+    .filter-bar {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        flex: none;
+        padding: 14px 16px;
+        font-size: 14px;
+        white-space: nowrap;
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .card-content {
+        padding: 24px 20px;
+    }
+
+    .card-title {
+        font-size: clamp(22px, 4vw, 30px);
+    }
+
+    .card-description {
+        font-size: 16px;
+    }
+
+    .learn-more-btn {
+        min-height: 44px;
+        touch-action: manipulation;
+        align-self: stretch;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card-image img,
+    .filter-btn,
+    .learn-more-btn,
+    .project-card {
+        transition: none;
+    }
 }
 </style>

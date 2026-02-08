@@ -33,6 +33,7 @@
     line-height: 1.1;
     color: black;
     margin: 0 0 25px 0;
+    text-wrap: balance;
 }
 
 .intro-description {
@@ -42,5 +43,22 @@
     line-height: 25.2px;
     color: black;
     margin: 0;
+}
+
+@media (max-width: 768px) {
+    .intro-text-wrapper {
+        padding: 16px;
+        margin: 0;
+    }
+
+    .intro-heading {
+        font-size: clamp(24px, 6vw, 36px);
+        margin-bottom: 16px;
+    }
+
+    .intro-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
 }
 </style>

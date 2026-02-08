@@ -13,7 +13,7 @@
                 </p>
                 <div class="cta-hotline">
                     <span class="hotline-label">Hotline:</span>
-                    <a href="tel:1800585833" class="hotline-number">1800 585 833</a>
+                    <a href="tel:1800585833" class="hotline-number" aria-label="Gọi hotline 1800 585 833">1800 585 833</a>
                 </div>
                 <a href="#" class="cta-btn">
                     <span>Liên hệ ngay</span>
@@ -23,7 +23,7 @@
                 </a>
             </div>
             <div class="cta-image">
-                <img src="https://placehold.co/710x500/0d47a1/white?text=Liên+hệ+dịch+vụ" alt="Liên hệ dịch vụ" />
+                <img src="https://placehold.co/710x500/0d47a1/white?text=Liên+hệ+dịch+vụ" alt="Liên hệ dịch vụ" width="710" height="500" loading="lazy" />
             </div>
         </div>
     </section>
@@ -110,7 +110,12 @@
     cursor: pointer;
     align-self: flex-start;
     margin-top: auto;
-    transition: all 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cta-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .cta-btn:hover {
@@ -132,5 +137,55 @@
 
 .cta-image:hover img {
     transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+    .service-cta-wrapper {
+        margin: 0;
+    }
+
+    .cta-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-info {
+        padding: 30px 20px;
+        min-height: auto;
+    }
+
+    .cta-title {
+        font-size: clamp(32px, 7vw, 64px);
+        text-wrap: balance;
+    }
+
+    .cta-title br {
+        display: none;
+    }
+
+    .cta-image {
+        height: 300px;
+    }
+
+    .cta-btn {
+        min-height: 44px;
+        touch-action: manipulation;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hotline-number {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        touch-action: manipulation;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .cta-btn,
+    .cta-image img {
+        transition: none;
+    }
 }
 </style>

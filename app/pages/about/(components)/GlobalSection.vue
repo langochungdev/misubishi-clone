@@ -23,7 +23,7 @@
 
             <div class="links-block">
                 <div class="history-banner">
-                    <img src="https://placehold.co/710x337/1a1a2e/white?text=Lịch+sử+Mitsubishi+Electric" alt="Lịch sử Mitsubishi Electric" class="history-image" />
+                    <img src="https://placehold.co/710x337/1a1a2e/white?text=Lịch+sử+Mitsubishi+Electric" alt="Lịch sử Mitsubishi Electric" width="710" height="337" loading="lazy" class="history-image" />
                     <span class="history-label">Lịch sử Mitsubishi Electric</span>
                     <a href="#" class="history-btn">
                         <span>Tìm hiểu thêm</span>
@@ -109,12 +109,19 @@ const globalLinks = [
     cursor: pointer;
     margin-top: auto;
     align-self: flex-end;
-    transition: all 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    touch-action: manipulation;
+    min-height: 44px;
 }
 
 .learn-more-btn:hover {
     background: black;
     color: white;
+}
+
+.learn-more-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .links-block {
@@ -164,12 +171,19 @@ const globalLinks = [
     color: white;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    touch-action: manipulation;
+    min-height: 44px;
 }
 
 .history-btn:hover {
     background: white;
     color: black;
+}
+
+.history-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .global-links {
@@ -188,14 +202,93 @@ const globalLinks = [
     font-size: 22px;
     color: black;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    touch-action: manipulation;
+    min-height: 44px;
 }
 
 .global-link-item:hover {
     color: #e60012;
 }
 
+.global-link-item:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
+}
+
 .link-icon {
     font-size: 20px;
+}
+
+@media (max-width: 768px) {
+    .global-section-wrapper {
+        margin: 0;
+    }
+
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-block {
+        padding: 28px 16px;
+        min-height: auto;
+    }
+
+    .section-title {
+        font-size: clamp(32px, 8vw, 48px);
+        line-height: 1.15;
+        margin-bottom: 24px;
+    }
+
+    .section-title br {
+        display: none;
+    }
+
+    .section-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .learn-more-btn {
+        align-self: stretch;
+        justify-content: center;
+        margin-top: 24px;
+        font-size: 16px;
+    }
+
+    .history-banner {
+        min-height: 220px;
+    }
+
+    .history-label {
+        font-size: 18px;
+        top: 16px;
+        left: 16px;
+    }
+
+    .history-btn {
+        bottom: 16px;
+        right: 16px;
+        font-size: 15px;
+        padding: 8px 14px;
+    }
+
+    .global-links {
+        padding: 20px 16px;
+        gap: 8px;
+    }
+
+    .global-link-item {
+        font-size: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .learn-more-btn,
+    .history-btn,
+    .global-link-item {
+        transition: none;
+    }
 }
 </style>

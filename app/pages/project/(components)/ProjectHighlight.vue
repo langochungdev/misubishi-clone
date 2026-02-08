@@ -4,7 +4,7 @@
     <section class="project-highlight-wrapper">
         <div class="highlight-grid">
             <div class="highlight-image">
-                <img src="https://placehold.co/710x560/1a237e/white?text=Dự+án+nổi+bật" alt="Dự án nổi bật" />
+                <img src="https://placehold.co/710x560/1a237e/white?text=Dự+án+nổi+bật" alt="Dự án nổi bật" width="710" height="560" loading="lazy" />
             </div>
             <div class="highlight-content">
                 <span class="highlight-label">DỰ ÁN NỔI BẬT</span>
@@ -141,11 +141,63 @@ const features = [
     cursor: pointer;
     align-self: flex-start;
     margin-top: auto;
-    transition: all 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.highlight-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .highlight-btn:hover {
     background: #c50010;
     border-color: #c50010;
+}
+
+@media (max-width: 768px) {
+    .project-highlight-wrapper {
+        margin: 0;
+    }
+
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .highlight-image {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .highlight-content {
+        padding: 30px 20px;
+    }
+
+    .highlight-title {
+        font-size: clamp(28px, 5vw, 40px);
+        text-wrap: balance;
+    }
+
+    .highlight-title br {
+        display: none;
+    }
+
+    .highlight-description {
+        font-size: 16px;
+    }
+
+    .highlight-btn {
+        min-height: 44px;
+        touch-action: manipulation;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .highlight-btn,
+    .highlight-image img {
+        transition: none;
+    }
 }
 </style>

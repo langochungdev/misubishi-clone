@@ -41,7 +41,7 @@
         <div class="hotline-bar">
             <div class="hotline-content">
                 <span class="hotline-label">Đường dây nóng hỗ trợ 24/7:</span>
-                <a href="tel:1800585833" class="hotline-number">1800 585 833</a>
+                <a href="tel:1800585833" class="hotline-number" aria-label="Gọi đường dây nóng 1800 585 833">1800 585 833</a>
             </div>
         </div>
     </section>
@@ -184,5 +184,48 @@ const offices = [
 
 .hotline-number:hover {
     color: #ff3344;
+}
+
+@media (max-width: 768px) {
+    .info-heading {
+        font-size: clamp(28px, 6vw, 48px);
+    }
+
+    .info-description {
+        font-size: 16px;
+    }
+
+    .offices-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .office-card {
+        padding: 30px 20px;
+        border-right: none;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .office-card:last-child {
+        border-bottom: none;
+    }
+
+    .hotline-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hotline-number {
+        font-size: 28px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        touch-action: manipulation;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hotline-number {
+        transition: none;
+    }
 }
 </style>

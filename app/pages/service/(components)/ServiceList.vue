@@ -13,7 +13,7 @@
         <div class="service-grid">
             <div v-for="service in services" :key="service.id" class="service-card">
                 <div class="card-image">
-                    <img :src="service.image" :alt="service.title" />
+                    <img :src="service.image" :alt="service.title" width="710" height="400" loading="lazy" />
                 </div>
                 <div class="card-content">
                     <h3 class="card-title">{{ service.title }}</h3>
@@ -185,11 +185,70 @@ const services = [
     cursor: pointer;
     margin-top: auto;
     align-self: flex-end;
-    transition: all 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.learn-more-btn:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 2px;
 }
 
 .learn-more-btn:hover {
     background: black;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .service-list-wrapper {
+        margin: 0;
+    }
+
+    .service-intro {
+        padding: 15px 20px;
+    }
+
+    .intro-heading {
+        font-size: clamp(28px, 6vw, 48px);
+    }
+
+    .intro-description {
+        font-size: 16px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .card-content {
+        padding: 24px 20px;
+    }
+
+    .card-title {
+        font-size: clamp(22px, 4vw, 30px);
+    }
+
+    .card-description {
+        font-size: 16px;
+    }
+
+    .learn-more-btn {
+        min-height: 44px;
+        touch-action: manipulation;
+        align-self: stretch;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card-image img,
+    .learn-more-btn {
+        transition: none;
+    }
 }
 </style>
