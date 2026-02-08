@@ -396,8 +396,13 @@
     }
 
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 28px;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 16px;
+    }
+
+    .footer-grid>.footer-col:first-child,
+    .footer-grid>.footer-col:last-child {
+        grid-column: 1 / -1;
     }
 
     .company-col {
