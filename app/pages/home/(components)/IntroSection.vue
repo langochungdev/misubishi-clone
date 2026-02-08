@@ -300,7 +300,7 @@
     .banner-link.data-center,
     .banner-link.ai-robot {
         height: auto;
-        aspect-ratio: 16 / 7;
+        /* aspect-ratio: 16 / 7; */
     }
 
     .banner-text img {

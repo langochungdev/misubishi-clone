@@ -54,9 +54,10 @@
 
 @media (max-width: 768px) {
     .hero-slider {
-        height: 50vw;
-        min-height: 220px;
-        max-height: 360px;
+        padding-top: 56px;
+        height: calc(50vw + 56px);
+        min-height: 276px;
+        max-height: 416px;
     }
 
     .hero-content {

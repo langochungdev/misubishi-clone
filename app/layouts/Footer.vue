@@ -129,7 +129,7 @@
                     <span class="divider">|</span>
                     <NuxtLink to="/contact">Sơ đồ trang web</NuxtLink>
                     <span class="divider">|</span>
-                    <span class="designed-by">Designed by <strong>MEV&nbsp;Team</strong></span>
+                    <span class="designed-by">Designed by <strong>La Ngoc Hung</strong></span>
                 </div>
             </div>
         </div>

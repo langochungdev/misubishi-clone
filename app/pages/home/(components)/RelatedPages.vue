@@ -200,7 +200,7 @@ function nextSlide() {
         scroll-snap-type: x mandatory;
         scrollbar-width: none;
         gap: 2px;
-        padding: 0 16px;
+        /* padding: 0 16px; */
     }
 
     .carousel-track::-webkit-scrollbar {

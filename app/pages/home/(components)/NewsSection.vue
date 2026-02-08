@@ -203,7 +203,7 @@ const newsItems = ref<NewsItem[]>([
 
 @media (max-width: 768px) {
     .news-tabs {
-        display: flex;
+        /* display: flex; */
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
