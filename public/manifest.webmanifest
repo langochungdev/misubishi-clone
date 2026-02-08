@@ -1,0 +1,45 @@
+{
+    "name": "Mitsubishi Electric Việt Nam",
+    "short_name": "MELCO VN",
+    "description": "Giải pháp điều hòa không khí, thang máy, tự động hóa công nghiệp, thiết bị điện gia dụng hàng đầu Nhật Bản.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#e60012",
+    "lang": "vi",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/img/favicon.ico",
+            "sizes": "48x48",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "/img/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/img/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ],
+    "categories": ["business", "utilities"]
+}

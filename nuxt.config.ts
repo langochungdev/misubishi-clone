@@ -8,7 +8,7 @@ export default defineNuxtConfig({
     modules: ["@nuxtjs/seo"],
 
     site: {
-        url: "https://mitsubishielectric.com.vn",
+        url: "https://misubishi-clone.langochung.me",
         name: "Mitsubishi Electric Việt Nam",
         description: "Mitsubishi Electric Việt Nam - Giải pháp điều hòa không khí, thang máy, tự động hóa công nghiệp, thiết bị điện gia dụng hàng đầu Nhật Bản.",
         defaultLocale: "vi",
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
                     name: "keywords",
                     content: "Mitsubishi Electric, điều hòa, thang máy, tự động hóa, thiết bị điện, Việt Nam",
                 },
-                { name: "theme-color", content: "#e60012" },
+                { name: "theme-color", content: "#000000" },
                 { name: "robots", content: "index, follow" },
 
                 { property: "og:type", content: "website" },
@@ -44,11 +44,11 @@ export default defineNuxtConfig({
                 },
                 {
                     property: "og:url",
-                    content: "https://mitsubishielectric.com.vn",
+                    content: "https://misubishi-clone.langochung.me",
                 },
                 {
                     property: "og:image",
-                    content: "https://mitsubishielectric.com.vn/og-image.jpg",
+                    content: "https://misubishi-clone.langochung.me/img/og-image.jpg",
                 },
                 { property: "og:image:width", content: "1200" },
                 { property: "og:image:height", content: "630" },
@@ -69,29 +69,30 @@ export default defineNuxtConfig({
                 },
                 {
                     name: "twitter:image",
-                    content: "https://mitsubishielectric.com.vn/og-image.jpg",
+                    content: "https://misubishi-clone.langochung.me/img/og-image.jpg",
                 },
             ],
             link: [
-                { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+                { rel: "icon", type: "image/x-icon", href: "/img/favicon.ico" },
                 {
                     rel: "icon",
                     type: "image/png",
                     sizes: "32x32",
-                    href: "/favicon-32x32.png",
+                    href: "/img/favicon-32x32.png",
                 },
                 {
                     rel: "icon",
                     type: "image/png",
                     sizes: "16x16",
-                    href: "/favicon-16x16.png",
+                    href: "/img/favicon-16x16.png",
                 },
                 {
                     rel: "apple-touch-icon",
                     sizes: "180x180",
-                    href: "/apple-touch-icon.png",
+                    href: "/img/apple-touch-icon.png",
                 },
-                { rel: "canonical", href: "https://mitsubishielectric.com.vn" },
+                { rel: "manifest", href: "/manifest.webmanifest" },
+                { rel: "canonical", href: "https://misubishi-clone.langochung.me" },
                 {
                     rel: "preconnect",
                     href: "https://fonts.googleapis.com",
@@ -113,8 +114,8 @@ export default defineNuxtConfig({
         identity: {
             type: "Organization",
             name: "Mitsubishi Electric Vietnam Co., Ltd.",
-            url: "https://mitsubishielectric.com.vn",
-            logo: "https://mitsubishielectric.com.vn/logo.png",
+            url: "https://misubishi-clone.langochung.me",
+            logo: "https://misubishi-clone.langochung.me/img/logo.png",
             description: "Mitsubishi Electric Việt Nam - Giải pháp điều hòa không khí, thang máy, tự động hóa công nghiệp, thiết bị điện gia dụng hàng đầu Nhật Bản.",
             address: {
                 "@type": "PostalAddress",
@@ -173,6 +174,6 @@ export default defineNuxtConfig({
                 allow: ["/"],
             },
         ],
-        sitemap: ["https://mitsubishielectric.com.vn/sitemap.xml"],
+        sitemap: ["https://misubishi-clone.langochung.me/sitemap.xml"],
     },
 });
