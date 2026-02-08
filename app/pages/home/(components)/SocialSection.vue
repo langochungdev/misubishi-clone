@@ -76,7 +76,7 @@ const videos = [
 .social-grid {
     display: grid;
     grid-template-columns: 480px 1fr;
-    min-height: 1218px;
+    /* min-height: 1218px; */
 }
 
 .facebook-column {

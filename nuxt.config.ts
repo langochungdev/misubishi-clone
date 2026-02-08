@@ -50,8 +50,8 @@ export default defineNuxtConfig({
                     property: "og:image",
                     content: "https://misubishi-clone.langochung.me/img/og-image.jpg",
                 },
-                { property: "og:image:width", content: "1200" },
-                { property: "og:image:height", content: "630" },
+                { property: "og:image:width", content: "1656" },
+                { property: "og:image:height", content: "958" },
                 { property: "og:locale", content: "vi_VN" },
                 {
                     property: "og:site_name",
