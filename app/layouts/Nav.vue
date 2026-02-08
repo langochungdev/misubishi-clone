@@ -1,5 +1,5 @@
 <template>
-    <header class="header-nav">
+    <header :class="['header-nav', { 'nav-hidden': !isVisible }]">
         <div class="header-container">
             <div class="logo-section">
                 <a href="/" class="logo-link">
@@ -9,13 +9,23 @@
 
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Dịch vụ</a></li>
+                    <li>
+                        <NuxtLink to="/">Trang chủ</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/about">Giới thiệu</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/project">Dự án</NuxtLink>
+                    </li>
+                    <li>
+                        <NuxtLink to="/service">Dịch vụ</NuxtLink>
+                    </li>
                     <li><a href="#">Sản phẩm</a></li>
-                    <li><a href="#">Dự án</a></li>
                     <li><a href="#">Bài viết</a></li>
-                    <li><a href="#">Liên hệ</a></li>
+                    <li>
+                        <NuxtLink to="/contact">Liên hệ</NuxtLink>
+                    </li>
                 </ul>
             </nav>
 
@@ -32,6 +42,28 @@
 </template>
 
 <script setup lang="ts">
+const isVisible = ref(true);
+const lastScrollY = ref(0);
+
+const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY.value && currentScrollY > 85) {
+        isVisible.value = false;
+    } else if (currentScrollY < lastScrollY.value) {
+        isVisible.value = true;
+    }
+
+    lastScrollY.value = currentScrollY;
+};
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+});
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll);
+});
 </script>
 
 <style scoped>
@@ -45,6 +77,12 @@
     z-index: 1000;
     display: flex;
     justify-content: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-nav.nav-hidden {
+    transform: translateY(-100%);
 }
 
 .header-container {

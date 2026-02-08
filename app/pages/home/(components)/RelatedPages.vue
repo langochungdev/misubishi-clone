@@ -62,7 +62,7 @@ function nextSlide() {
     max-width: 1440px;
     margin: 0 auto;
     background: #f5f5f5;
-    padding: 30px 0 55px;
+    padding: 30px 0;
 }
 
 .related-title {
