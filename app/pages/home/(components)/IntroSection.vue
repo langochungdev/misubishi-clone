@@ -6,72 +6,72 @@
                 <div class="intro-card">
                     <h3>Số liệu công ty</h3>
                     <p>Mitsubishi Electric là một trong những thương hiệu hàng đầu thế giới về sản xuất và kinh doanh các hệ thống, sản phẩm điện-điện tử dùng trong hàng loạt lĩnh vực và ứng dụng.</p>
-                    <button class="expand-btn">+</button>
+                    <button class="expand-btn" aria-label="Mở rộng số liệu công ty">+</button>
                 </div>
                 <div class="intro-card">
                     <h3>Lịch sử</h3>
                     <p>Từ khi thành lập vào năm 1921, Mitsubishi Electric đã luôn đi đầu trong công cuộc đổi mới sản phẩm và sáng tạo kỹ thuật của Nhật Bản</p>
-                    <button class="expand-btn">+</button>
+                    <button class="expand-btn" aria-label="Mở rộng lịch sử">+</button>
                 </div>
                 <div class="intro-card">
                     <h3>Vị trí</h3>
                     <p>Từ năm 2011 đến nay, Mitsubishi Electric thành lập trụ sở chính tại TP. Hồ Chí Minh, 2 chi nhánh (Đà Nẵng và Hà Nội) và 1 showroom tại Hà Nội.</p>
-                    <button class="expand-btn">+</button>
+                    <button class="expand-btn" aria-label="Mở rộng vị trí">+</button>
                 </div>
             </div>
         </div>
 
         <div class="banner-links">
             <a href="#" class="banner-link data-center">
-                <img src="https://placehold.co/1440x462/1a237e/white?text=Data+Center+Solutions" alt="Data Center Solutions" />
+                <img src="https://placehold.co/1440x462/1a237e/white?text=Data+Center+Solutions" alt="Data Center Solutions" width="1440" height="462" loading="lazy" />
                 <div class="banner-text">
-                    <img src="https://placehold.co/576x100/transparent/white?text=Data+Center+Solutions" alt="Data Center Solutions" />
+                    <img src="https://placehold.co/576x100/transparent/white?text=Data+Center+Solutions" alt="Data Center Solutions" width="576" height="100" loading="lazy" />
                 </div>
             </a>
 
             <a href="#" class="banner-link ai-robot">
-                <img src="https://placehold.co/1440x442/263238/white?text=AI+Robot+Technology" alt="Leading the industry with AI robot" />
+                <img src="https://placehold.co/1440x442/263238/white?text=AI+Robot+Technology" alt="Leading the industry with AI robot" width="1440" height="442" loading="lazy" />
             </a>
         </div>
 
         <div class="product-grid">
             <a href="#" class="product-card">
-                <img src="https://placehold.co/480x350/2e7d32/white?text=Green+Building" alt="Green Building" />
+                <img src="https://placehold.co/480x350/2e7d32/white?text=Green+Building" alt="Green Building" width="480" height="350" loading="lazy" />
                 <div class="product-overlay">
-                    <h3>TIÊN PHONG GIẢI PHÁP TỔNG THỂ<br />CHO TÒA NHÀ XANH</h3>
+                    <h3>TIÊN PHONG GIẢI PHÁP TỔNG THỂ CHO TÒA NHÀ XANH</h3>
                     <span class="learn-more">Tìm hiểu thêm →</span>
                 </div>
             </a>
             <a href="#" class="product-card">
-                <img src="https://placehold.co/480x350/1565c0/white?text=Data+Center" alt="Data Center" />
+                <img src="https://placehold.co/480x350/1565c0/white?text=Data+Center" alt="Data Center" width="480" height="350" loading="lazy" />
                 <div class="product-overlay">
-                    <h3>Giải pháp Tổng thể cho Trung tâm dữ<br />liệu</h3>
+                    <h3>Giải pháp Tổng thể cho Trung tâm dữ liệu</h3>
                     <span class="learn-more">Tìm hiểu thêm →</span>
                 </div>
             </a>
             <a href="#" class="product-card">
-                <img src="https://placehold.co/480x350/ff6f00/white?text=Factory+Automation" alt="Factory Automation" />
+                <img src="https://placehold.co/480x350/ff6f00/white?text=Factory+Automation" alt="Factory Automation" width="480" height="350" loading="lazy" />
                 <div class="product-overlay">
                     <h3>Hệ thống Tự động hóa Công nghiệp</h3>
                     <span class="learn-more">Tìm hiểu thêm →</span>
                 </div>
             </a>
             <a href="#" class="product-card">
-                <img src="https://placehold.co/480x350/00bcd4/white?text=Air+Conditioner" alt="Air Conditioner" />
+                <img src="https://placehold.co/480x350/00bcd4/white?text=Air+Conditioner" alt="Air Conditioner" width="480" height="350" loading="lazy" />
                 <div class="product-overlay">
                     <h3>Điều hòa không khí Mitsubishi Electric</h3>
                     <span class="learn-more">Tìm hiểu thêm →</span>
                 </div>
             </a>
             <a href="#" class="product-card">
-                <img src="https://placehold.co/480x350/607d8b/white?text=Refrigerator" alt="Refrigerator" />
+                <img src="https://placehold.co/480x350/607d8b/white?text=Refrigerator" alt="Refrigerator" width="480" height="350" loading="lazy" />
                 <div class="product-overlay">
                     <h3>Tủ lạnh Mitsubishi Electric</h3>
                     <span class="learn-more">Tìm hiểu thêm →</span>
                 </div>
             </a>
             <a href="#" class="product-card">
-                <img src="https://placehold.co/480x350/8bc34a/white?text=Fans" alt="Fans" />
+                <img src="https://placehold.co/480x350/8bc34a/white?text=Fans" alt="Fans" width="480" height="350" loading="lazy" />
                 <div class="product-overlay">
                     <h3>Quạt điện Mitsubishi Electric</h3>
                     <span class="learn-more">Tìm hiểu thêm →</span>
@@ -139,6 +139,18 @@
     font-size: 45px;
     cursor: pointer;
     font-weight: 300;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+.expand-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .banner-links {
@@ -157,6 +169,10 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+.banner-link {
+    touch-action: manipulation;
 }
 
 .banner-link.data-center {
@@ -195,11 +211,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
-.product-card:hover img {
+.product-card:hover img,
+.product-card:focus-visible img {
     transform: scale(1.05);
+}
+
+.product-card:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: -2px;
 }
 
 .product-overlay {
@@ -224,6 +246,7 @@
     text-shadow: -4px 5px 14px black;
     margin-bottom: 20px;
     line-height: 1.2;
+    text-wrap: balance;
 }
 
 .learn-more {
@@ -274,16 +297,14 @@
         bottom: 24px;
     }
 
-    .banner-link.data-center {
-        height: 200px;
-    }
-
+    .banner-link.data-center,
     .banner-link.ai-robot {
-        height: 200px;
+        height: auto;
+        aspect-ratio: 16 / 7;
     }
 
     .banner-text img {
-        max-width: 280px;
+        max-width: 60vw;
     }
 
     .product-grid {
@@ -291,16 +312,33 @@
     }
 
     .product-card {
-        height: 220px;
+        height: 56vw;
+        min-height: 200px;
+        max-height: 280px;
+    }
+
+    .product-overlay {
+        padding: 16px;
     }
 
     .product-overlay h3 {
-        font-size: 18px;
+        font-size: clamp(16px, 4.5vw, 20px);
+        margin-bottom: 12px;
     }
 
     .learn-more {
         padding: 10px 20px;
-        font-size: 15px;
+        font-size: 14px;
+    }
+
+    .intro-card:last-child {
+        border-bottom: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .product-card img {
+            transition: none;
+        }
     }
 }
 </style>

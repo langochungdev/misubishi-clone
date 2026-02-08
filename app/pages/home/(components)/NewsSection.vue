@@ -9,7 +9,7 @@
         <div class="news-grid">
             <article v-for="news in newsItems" :key="news.id" class="news-card">
                 <a :href="news.link" class="news-image">
-                    <img :src="news.image" :alt="news.title" />
+                    <img :src="news.image" :alt="news.title" width="432" height="224" loading="lazy" />
                 </a>
                 <div class="news-content">
                     <span class="news-date">{{ news.date }}</span>
@@ -91,7 +91,8 @@ const newsItems = ref<NewsItem[]>([
     font-weight: 400;
     font-size: 30px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background 0.3s ease;
+    touch-action: manipulation;
 }
 
 .tab-btn:last-child {
@@ -101,6 +102,11 @@ const newsItems = ref<NewsItem[]>([
 .tab-btn:hover,
 .tab-btn.active {
     background: #333;
+}
+
+.tab-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: -2px;
 }
 
 .news-grid {
@@ -129,6 +135,10 @@ const newsItems = ref<NewsItem[]>([
 }
 
 .news-card:hover .news-image img {
+    transform: scale(1.05);
+}
+
+.news-card:focus-within .news-image img {
     transform: scale(1.05);
 }
 
@@ -177,7 +187,8 @@ const newsItems = ref<NewsItem[]>([
     text-decoration: none;
     text-align: center;
     align-self: center;
-    transition: all 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    touch-action: manipulation;
 }
 
 .news-btn:hover {
@@ -185,20 +196,34 @@ const newsItems = ref<NewsItem[]>([
     color: white;
 }
 
+.news-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
+}
+
 @media (max-width: 768px) {
     .news-tabs {
-        grid-template-columns: 1fr;
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .news-tabs::-webkit-scrollbar {
+        display: none;
     }
 
     .tab-btn {
-        padding: 16px 20px;
-        font-size: 18px;
-        border-right: none;
-        border-bottom: 1px solid #333;
+        padding: 14px 20px;
+        font-size: 14px;
+        border-right: 1px solid #444;
+        border-bottom: none;
+        white-space: nowrap;
+        flex-shrink: 0;
     }
 
     .tab-btn:last-child {
-        border-bottom: none;
+        border-right: none;
     }
 
     .news-grid {
@@ -206,8 +231,9 @@ const newsItems = ref<NewsItem[]>([
     }
 
     .news-image {
-        height: 200px;
-        padding: 16px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+        padding: 16px 16px 0;
     }
 
     .news-content {
@@ -219,8 +245,18 @@ const newsItems = ref<NewsItem[]>([
     }
 
     .news-btn {
-        font-size: 16px;
+        font-size: 15px;
         padding: 10px 14px;
+        margin-top: 16px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .news-image img,
+    .news-btn,
+    .tab-btn {
+        transition: none;
     }
 }
 </style>

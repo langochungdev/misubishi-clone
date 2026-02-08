@@ -17,8 +17,8 @@
                 <div class="videos-grid">
                     <div v-for="video in videos" :key="video.id" class="video-card">
                         <a :href="video.link" class="video-thumbnail">
-                            <img :src="video.thumbnail" :alt="video.title" />
-                            <div class="play-button">
+                            <img :src="video.thumbnail" :alt="video.title" width="440" height="323" loading="lazy" />
+                            <div class="play-button" aria-hidden="true">
                                 <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
                                     <circle cx="30" cy="30" r="28" fill="rgba(0,0,0,0.6)" stroke="white" stroke-width="2" />
                                     <path d="M24 18l18 12-18 12V18z" fill="white" />
@@ -29,7 +29,7 @@
                     </div>
                 </div>
 
-                <a href="https://www.youtube.com/@MitsubishiElectricVietnam" target="_blank" class="youtube-btn">
+                <a href="https://www.youtube.com/@MitsubishiElectricVietnam" target="_blank" rel="noopener noreferrer" class="youtube-btn">
                     Youtube
                     <img src="https://www.youtube.com/favicon.ico" alt="YouTube" />
                 </a>
@@ -131,6 +131,7 @@ const videos = [
     height: 323px;
     overflow: hidden;
     background: #333;
+    touch-action: manipulation;
 }
 
 .video-thumbnail img {
@@ -144,11 +145,16 @@ const videos = [
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .video-thumbnail:hover .play-button {
     transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-thumbnail:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 .video-title {
@@ -176,7 +182,8 @@ const videos = [
     font-weight: 700;
     font-size: 18px;
     text-decoration: none;
-    transition: all 0.3s;
+    transition: background 0.3s ease, color 0.3s ease;
+    touch-action: manipulation;
 }
 
 .youtube-btn img {
@@ -187,6 +194,11 @@ const videos = [
 .youtube-btn:hover {
     background: black;
     color: white;
+}
+
+.youtube-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
 }
 
 @media (max-width: 768px) {
@@ -224,7 +236,13 @@ const videos = [
     }
 
     .video-thumbnail {
-        height: 200px;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+
+    .play-button svg {
+        width: 48px;
+        height: 48px;
     }
 
     .video-card {
@@ -238,9 +256,19 @@ const videos = [
 
     .youtube-btn {
         position: static;
-        margin-top: 20px;
+        margin-top: 24px;
         display: inline-flex;
         font-size: 16px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .play-button,
+    .youtube-btn {
+        transition: none;
     }
 }
 </style>

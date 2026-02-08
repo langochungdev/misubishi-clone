@@ -11,7 +11,7 @@
 
             <div class="carousel-track">
                 <a v-for="page in relatedPages" :key="page.id" :href="page.link" class="related-card">
-                    <img :src="page.image" :alt="page.title" />
+                    <img :src="page.image" :alt="page.title" width="480" height="320" loading="lazy" />
                     <span class="learn-more">Tìm hiểu thêm →</span>
                 </a>
             </div>
@@ -87,6 +87,18 @@ function nextSlide() {
     cursor: pointer;
     padding: 10px;
     color: black;
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+}
+
+.carousel-btn:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: 2px;
+    border-radius: 4px;
 }
 
 .carousel-btn.prev {
@@ -116,10 +128,19 @@ function nextSlide() {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .related-card:hover img {
+    transform: scale(1.05);
+}
+
+.related-card:focus-visible {
+    outline: 2px solid #e60012;
+    outline-offset: -2px;
+}
+
+.related-card:focus-visible img {
     transform: scale(1.05);
 }
 
@@ -168,22 +189,45 @@ function nextSlide() {
         margin: 0 16px 20px;
     }
 
+    .carousel-container {
+        overflow: hidden;
+    }
+
     .carousel-track {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 80vw);
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        gap: 2px;
+        padding: 0 16px;
+    }
+
+    .carousel-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    .related-card {
+        height: 52vw;
+        min-height: 180px;
+        max-height: 260px;
+        scroll-snap-align: start;
     }
 
     .carousel-btn {
         display: none;
     }
 
-    .related-card {
-        height: 220px;
-    }
-
     .learn-more {
         padding: 10px 20px;
-        font-size: 15px;
+        font-size: 14px;
         bottom: 20px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .related-card img {
+        transition: none;
     }
 }
 </style>
